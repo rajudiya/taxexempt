@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Igauri_TaxExempt" translate="label" sortOrder="10">
+            <label>Igauri</label>
+        </tab>
+        <section id="igauri" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Tex Payables</label>
+            <tab>Igauri_TaxExempt</tab>
+            <resource>Igauri_TaxExempt::igauri_taxexempt</resource>
+            <group id="paytex" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Igauri Customer Tex Configration</label>
+                <field id="tex" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Customer Tex Configration</label>
+                    <frontend_model>Igauri\TaxExempt\Block\Adminhtml\Form\Field\Ranges</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
